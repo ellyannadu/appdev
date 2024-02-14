@@ -1,0 +1,116 @@
+.body {
+            overflow-x: hidden;
+        }
+
+        .paralax {
+            position: absolute;
+            height: 100%;
+        }
+        
+        .paralax-item {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+        }
+
+        .p-item1 {
+            background: url("group.jpg") center/cover no-repeat;
+        }
+
+        .p-item3 {
+            background: url("frame.png") center/100% no-repeat;
+            background-size: cover;
+            background-position: center;
+            z-index: 2;
+        }
+
+        @keyframes slideAndFadeIn {
+         0% {
+        opacity: 0;
+        transform: translateY(20px);
+        }
+
+        100% {
+        opacity: 1;
+        transform: translateY(0);
+        }
+            }
+
+        .container {
+            position: relative;
+            z-index: 1;
+            max-width: 1140px;
+            margin: 0 auto;
+            margin-top: 100vh;
+            animation: slideAndFadeIn 2s ease-in-out;
+        }
+
+        .content-header {
+            font-family: sans-serif;
+            color: whitesmoke;
+            text-align: center !important;
+            text-transform: uppercase;
+        }
+
+        .content-header h1 {
+            font-size: 120px;
+            font-weight: 600;
+            color: yellow;
+            margin-bottom: -40px;
+        }
+
+        .content-header h2 {
+            font-size: 40px;
+            font-weight: 500;
+            color: white;
+        }
+
+        .content {
+            width: auto;
+            height: auto;
+            display: flex;
+            align-items: center;
+            border-bottom: 4px solid yellow;
+            border-top: 4px solid yellow;
+            border-left: 4px solid yellow;
+            border-right: 4px solid yellow;
+            box-sizing: border-box;
+            background-color: #F04144;
+        }
+
+        .content p {
+            font-size: 19px;
+            font-family: sans-serif;
+            color: whitesmoke;
+            text-align: center !important;
+            line-height: 1.5; /* Adjusts the space between lines */
+            letter-spacing: 0; /* Adjusts the space between characters */
+        }
+
+        /* <div class="video-background">
+    <video playsinline autoplay muted loop>
+        <source src="path-to-your-video.mp4" type="video/mp4">
+    </video>
+    <div class="content">
+        <!-- Your text here -->
+    </div>
+</div> */
+
+/* .video-background {
+    position: relative;
+    overflow: hidden;
+}
+
+.video-background video {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.content {
+    position: relative;
+    z-index: 1;
+} */
