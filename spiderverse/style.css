@@ -1,11 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400..800&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400..800&display=swap');
+@import url('https://fonts.cdnfonts.com/css/the-amazing-spider-man');
 
-*{
-    padding: 0;
+* {padding: 0;
     margin: 0;
     box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
 }
 
 .container {
@@ -22,6 +27,12 @@
     position: relative;
     width: 100%;
     height: 100%;
+    scroll-snap-align: start;
+    scroll-snap-stop: normal;
+}
+
+.background-clip {
+    filter: brightness(0.5);
 }
 
 .content {
@@ -31,10 +42,9 @@
 }
 
 .content h1 {
-    font-family: 'Archivo Black', sans-serif;
+    font-family: 'the amazing spider-man', sans-serif;
     font-size: 100px;
     font-weight: bold;
-    color: #fff;
     background: -webkit-linear-gradient(left, #0000ff, #ff0000, #0000ff);
     -webkit-background-clip: text;
     background-clip: text;
@@ -43,7 +53,7 @@
     animation: glow 15s ease-in-out infinite;
 }
 
-.content a {
+.content a, .about a {
     font-family: 'Poppins', sans-serif;
     text-decoration: none;
     color: whitesmoke;
@@ -52,7 +62,7 @@
     transition: 0.5s;
 }
 
-.content a:hover {
+.content a:hover, .about a:hover {
     color: whitesmoke;
     text-shadow: 0 0 10px blue, 0 0 20px lightskyblue, 0 0 30px lightblue, 0 0 40px whitesmoke;
 }
@@ -72,7 +82,9 @@
     height: 100vh;
 }
 
-.about .overlay-text {
+/* joined overlays for about, members, and characters together */
+
+.about .overlay-text, .members .overlay-text, .characters .overlay-text {
     font-family: 'Poppins', sans-serif;
     font-size: 20px;
     position: absolute;
@@ -98,37 +110,11 @@
     animation: glow 15s ease-in-out infinite;
 }
 
-.about a {
-    font-family: 'Poppins', sans-serif;
-    text-decoration: none;
-    color: whitesmoke;
-    font-size: 18px;
-    padding: 10px 20px;
-    transition: 0.5s;
-}
-
-.about a:hover {
-    color: whitesmoke;
-    text-shadow: 0 0 10px blue, 0 0 20px lightskyblue, 0 0 30px lightblue, 0 0 40px whitesmoke;
-}
-
 .members {
     text-align: center;
     position: relative;
     z-index: 1;
     height: 100vh;
-}
-
-.members .overlay-text {
-    font-family: 'Poppins', sans-serif;
-    font-size: 20px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: #fff;
-    text-align: center;
-    z-index: 2;
 }
 
  .characters {
@@ -137,14 +123,3 @@
     height: 100vh;
 }
 
-.characters .overlay-text {
-    font-family: 'Poppins', sans-serif;
-    font-size: 20px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: #fff;
-    text-align: center;
-    z-index: 2;
-}
