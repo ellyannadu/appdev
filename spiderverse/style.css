@@ -53,7 +53,7 @@ html {
     animation: glow 15s ease-in-out infinite;
 }
 
-.content a, .about a {
+.content a, .about a, .members a, .characters a {
     font-family: 'Poppins', sans-serif;
     text-decoration: none;
     color: whitesmoke;
@@ -62,7 +62,7 @@ html {
     transition: 0.5s;
 }
 
-.content a:hover, .about a:hover {
+.content a:hover, .about a:hover, .members a:hover {
     color: whitesmoke;
     text-shadow: 0 0 10px blue, 0 0 20px lightskyblue, 0 0 30px lightblue, 0 0 40px whitesmoke;
 }
@@ -96,9 +96,9 @@ html {
     z-index: 2;
 }
 
-/* joined about, members, and characters together */
+/* joined about, members, characters, and ids together */
 
-.about h1, .members h1, .characters h1 {
+.about h1, .members h1, .characters h1, .ids h1 {
     font-family: 'Archivo Black', sans-serif;
     font-size: 50px;
     font-weight: bold;
@@ -123,3 +123,66 @@ html {
     height: 100vh;
 }
 
+.ids {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+.img-container { 
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+}
+
+.slider-wrapper {
+    position: relative;
+    max-width: 48rem;
+    margin: 0 auto;
+}
+
+.slider {
+    display: flex;
+    aspect-ratio: 16/9;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    overflow: hidden;
+    -ms-overflow-style: none; /* for IE and edge */
+    scrollbar-width: none; /* for firefox */
+}
+
+.slider::-webkit-scrollbar {
+    display: none;
+}
+
+.slider img {
+    flex: 1 0 100%;
+    scroll-snap-align: start;
+    object-fit: cover;
+}
+
+.slider-nav {
+    display: flex;
+    column-gap: 1rem;
+    position: absolute;
+    bottom: 1.25rem;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.slider-nav a {
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 50%;
+    border-radius: 50%;
+    background-color: whitesmoke;
+    opacity: 0.75;
+    transition: opacity-ease 250ms;
+}
+
+.slider-nav a:hover {
+    opacity: 1;
+}
