@@ -53,6 +53,7 @@ html {
     animation: glow 15s ease-in-out infinite;
 }
 
+
 .content a, .about a, .members a, .characters a {
     font-family: 'Poppins', sans-serif;
     text-decoration: none;
@@ -185,4 +186,27 @@ html {
 
 .slider-nav a:hover {
     opacity: 1;
+}
+
+.table {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    align-items: center;
+    top: 100%;
+    width: 100%;
+    z-index: 3;
+}
+
+.table th {
+    font-family: archivo black;
+    font-size: 20px;
+    color: whitesmoke;
+    padding: 10px 20px;
+}
+
+.table td {
+    font-family: poppins;
+    font-size: 15px;
+    color: whitesmoke;
 }
